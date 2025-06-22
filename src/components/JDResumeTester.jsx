@@ -16,19 +16,19 @@ const JDResumeTester = () => {
     formData.append("jobRole", "Custom JD Test");
     formData.append("jobDescription", jd);
 
-    try {
-      setLoading(true);
-      const response = await axios.post("http://localhost:8080/api/analyze", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+  try {
+  setLoading(true);
+  const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/analyze`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  setResult(response.data[0]); // Single resume test
+} catch (err) {
+  console.error("Analysis failed", err);
+  setResult(null);
+} finally {
+  setLoading(false);
+}
 
-      setResult(response.data[0]); // Single resume test
-    } catch (err) {
-      console.error("Analysis failed", err);
-      setResult(null);
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (
