@@ -27,7 +27,7 @@ const JDHeatmap = () => {
         formData.append("jobDescription", jdText);
 
         try {
-          const res = await axios.post("http://localhost:8080/api/analyze", formData);
+          const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/analyze`, formData);
           const match = res.data[0].matchScore;
           allResults.push({
             resume: resumes[i].name,

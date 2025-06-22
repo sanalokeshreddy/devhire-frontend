@@ -33,9 +33,9 @@ const ResumeUploader = () => {
     formData.append("jobDescription", jobDescription);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/analyze", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/analyze`, formData, {
+  headers: { "Content-Type": "multipart/form-data" },
+});
       setResults(response.data);
     } catch (error) {
       console.error("Error uploading resumes:", error);
@@ -50,9 +50,10 @@ const ResumeUploader = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8080/api/extract-skills", {
-        jobDescription,
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/extract-skills`, {
+      jobDescription,
       });
+
       setExtractedSkills(response.data);
     } catch (error) {
       console.error("Error extracting skills:", error);

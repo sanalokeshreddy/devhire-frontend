@@ -11,9 +11,10 @@ const JDExtractor = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post('http://localhost:8080/api/extract-skills', {
-        jobDescription: jdText,
-      });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/extract-skills`, {
+  jobDescription: jdText,
+});
+
 
       setSkills(response.data);
     } catch (err) {
