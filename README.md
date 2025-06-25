@@ -33,8 +33,8 @@ The application leverages Gemini AI through a Spring Boot backend to deliver int
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/sanalokeshreddy/devhire-ai-frontend.git](https://github.com/sanalokeshreddy/devhire-ai-frontend.git)
-    cd devhire-ai-frontend
+    git clone [https://github.com/sanalokeshreddy/devhire-frontend.git](https://github.com/sanalokeshreddy/devhire-frontend.git)
+    cd devhire-frontend
     ```
 
 2.  **Install dependencies:**
@@ -71,27 +71,27 @@ Here are some screenshots showcasing the different sections and features of the 
 
 ### Landing Page
 *(This is the main entry point where users choose between "Student" or "Recruiter" portals.)*
-![Landing Page](https://github.com/sanalokeshreddy/devhire-ai-frontend/blob/main/screenshots/landing-page.jpg?raw=true)
+![Landing Page](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/landing-page.jpg?raw=true)
 
 ### Get Started Section
 *(Highlights the two main user categories: Students & Developers and Recruiters.)*
-![Get Started Section](https://github.com/sanalokeshreddy/devhire-ai-frontend/blob/main/screenshots/get-started-section.jpg?raw=true)
+![Get Started Section](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/get-started-section.jpg?raw=true)
 
 ### Student & Developer Features Overview
 *(Displays the various features available for Students & Developers, such as Multi-JD Comparison, Match Score & Heatmap, AI Career Mentor, etc.)*
-![Student & Developer Features Overview](https://github.com/sanalokeshreddy/devhire-ai-frontend/blob/main/screenshots/student-developer-features.jpg?raw=true)
+![Student & Developer Features Overview](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/student-developer-features.jpg?raw=true)
 
 ### Student Portal - JD-Resume Match Heatmap Input
 *(Allows students to upload resumes and paste job descriptions for comparison.)*
-![Student Portal - JD-Resume Match Heatmap Input](https://github.com/sanalokeshreddy/devhire-ai-frontend/blob/main/screenshots/jd-resume-match-heatmap-input.jpg?raw=true)
+![Student Portal - JD-Resume Match Heatmap Input](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/jd-resume-match-heatmap-input.jpg?raw=true)
 
 ### Student Portal - Career Roadmap Generator Input
 *(Enables users to input details and generate a personalized career roadmap.)*
-![Student Portal - Career Roadmap Generator Input](https://github.com/sanalokeshreddy/devhire-ai-frontend/blob/main/screenshots/career-roadmap-generator-input.jpg?raw=true)
+![Student Portal - Career Roadmap Generator Input](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/career-roadmap-generator-input.jpg?raw=true)
 
 ### Recruiter Dashboard
 *(Provides recruiters with tools to enter job roles, paste job descriptions, extract skills, and analyze resumes.)*
-![Recruiter Dashboard](https://github.com/sanalokeshreddy/devhire-ai-frontend/blob/main/screenshots/recruiter-dashboard-input.jpg?raw=true)
+![Recruiter Dashboard](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/recruiter-dashboard-input.jpg?raw=true)
 
 ## 🙏 Acknowledgements
 
