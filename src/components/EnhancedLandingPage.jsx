@@ -283,26 +283,29 @@ const DevHireAILanding = () => {
           </div>
 
           {/* Stats Section */}
-          <div className={`mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '1400ms' }}>
-            {[
-              { number: '95%', label: 'Match Accuracy', icon: Target },
-              { number: '10K+', label: 'Resumes Analyzed', icon: FileText },
-              { number: '500+', label: 'Career Roadmaps', icon: BookOpen },
-              { number: '24/7', label: 'AI Availability', icon: Brain }
-            ].map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="flex justify-center mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <stat.icon className="w-6 h-6 text-blue-400" />
-                  </div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+         <div
+  className={`mt-20 flex justify-center ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}
+  style={{ animationDelay: '1400ms' }}
+>
+  {[
+    // { number: '95%', label: 'Match Accuracy', icon: Target },
+    // { number: '10K+', label: 'Resumes Analyzed', icon: FileText },
+    // { number: '500+', label: 'Career Roadmaps', icon: BookOpen },
+    { number: '24/7', label: 'AI Availability', icon: Brain }
+  ].map((stat, index) => (
+    <div key={index} className="text-center group">
+      <div className="flex justify-center mb-3">
+        <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+          <stat.icon className="w-6 h-6 text-blue-400" />
+        </div>
+      </div>
+      <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
+        {stat.number}
+      </div>
+      <div className="text-gray-400">{stat.label}</div>
+    </div>
+  ))}
+</div>
 
           {/* Tech Stack */}
           <div className={`mt-20 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '1600ms' }}>
