@@ -1,36 +1,35 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const JDExtractor = () => {
-  const [jdText, setJdText] = useState('');
+  const [jdText, setJdText] = useState("");
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleExtract = async () => {
     setLoading(true);
-    setError('');
+    setError("");
     try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/extract-skills`, {
-  jobDescription: jdText,
-});
-
-
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_URL}/api/extract-skills`,
+        { jobDescription: jdText }
+      );
       setSkills(response.data);
     } catch (err) {
       console.error(err);
-      setError('Failed to extract skills. Please try again.');
+      setError("Failed to extract skills. Please try again.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-6 max-w-3xl mx-auto mt-10">
-      <h2 className="text-2xl font-bold mb-4 text-blue-800">📝 JD Skill Extractor</h2>
+    <div className="bg-white shadow-xl rounded-2xl p-6 max-w-3xl mx-auto mt-10">
+      <h2 className="text-2xl font-bold mb-4 text-blue-700">📄 JD Skill Extractor</h2>
 
       <textarea
-        className="w-full h-40 border border-gray-300 rounded-lg p-4 text-sm focus:outline-none focus:ring focus:ring-blue-400"
+        className="w-full h-40 border border-gray-300 rounded-lg p-4 text-sm resize-y focus:outline-none focus:ring focus:ring-blue-400"
         placeholder="Paste your job description here..."
         value={jdText}
         onChange={(e) => setJdText(e.target.value)}
@@ -39,13 +38,12 @@ const JDExtractor = () => {
       <button
         onClick={handleExtract}
         disabled={loading || !jdText.trim()}
-        className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition disabled:opacity-50"
+        className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg transition disabled:opacity-50"
       >
         🚀 Extract Skills
       </button>
 
       {loading && <p className="mt-4 text-gray-500">Extracting skills using Gemini...</p>}
-
       {error && <p className="mt-4 text-red-500 font-medium">{error}</p>}
 
       {skills.length > 0 && (
