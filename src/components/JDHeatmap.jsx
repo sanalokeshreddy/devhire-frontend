@@ -29,7 +29,7 @@ const JDHeatmap = () => {
           formData.append("jobDescription", jd);
 
           try {
-            const res = await fetch("http://localhost:8080/api/analyze-single", {
+            const res = await fetch(`${process.env.REACT_APP_API_URL}/api/analyze-single`, {
               method: "POST",
               body: formData,
             });
