@@ -93,7 +93,3 @@ Here are some screenshots showcasing the different sections and features of the 
 *(Provides recruiters with tools to enter job roles, paste job descriptions, extract skills, and analyze resumes.)*
 ![Recruiter Dashboard](https://github.com/sanalokeshreddy/devhire-frontend/blob/main/screenshots/recruiter-dashboard-input.jpg?raw=true)
 
-## 🙏 Acknowledgements
-
-* Powered by Google Gemini AI
-* Apache Tika (for resume parsing, likely handled by the backend)
